@@ -10,6 +10,6 @@ public class Vanedannende extends Legemiddel {
     }
     @Override
     public String toString() {
-        return super.toString() + " Styrke: " + styrke;
+        return super.toString() + " Styrke: " + styrke + ", Type: Vanedannende";
     }
 }

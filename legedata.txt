@@ -1,4 +1,4 @@
-Pasienter (navn, fnr)
+# Pasienter (navn, fnr)
 Jens Hans Olsen,11111143521
 Petrolina Swiq,24120099343
 Sven Svendsen,10111224244

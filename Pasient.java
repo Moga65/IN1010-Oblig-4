@@ -5,7 +5,7 @@ public class Pasient {
     static  int teller = 0;
     private Lenkeliste<Resept> resepter;
 
-    public Pasient(String foedselsnummer, String navn){
+    public Pasient(String navn, String foedselsnummer){
         this.navn = navn;
         this.foedselsnummer = foedselsnummer;
         this.id = teller++;
@@ -31,7 +31,8 @@ public class Pasient {
         return resepter;
     }
 
+    @Override
     public String toString() {
-        return  navn ;
-}
+        return "Pasient: " + navn + ", ID: " + id + ", Fødselsnummer: " + foedselsnummer;
+    }
 }

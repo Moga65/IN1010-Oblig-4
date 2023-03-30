@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Lenkeliste<E> implements Liste<E>{
+public abstract class Lenkeliste<E> implements Liste<E>{
     Node foerst = null;
     Node sist = null;
     int stoerrelse = 0; 
@@ -28,18 +28,21 @@ public class Lenkeliste<E> implements Liste<E>{
         public ListeIterator(){
             denne = foerst;
         }
+        
         @Override 
         public boolean hasNext(){
-            if (foerst!=null){
+            if(denne == null){
+                return false;
+            }
+            else{
                 return true;
             }
-            return false;
         }
 
         @Override
         public E next() {
             if (!hasNext()){
-                throw new NoSuchElementException();
+                return denne.info;
             }
             E neste_2E = denne.info;
             denne = denne.neste;
@@ -49,7 +52,6 @@ public class Lenkeliste<E> implements Liste<E>{
     
     public Iterator<E> iterator(){
         return new ListeIterator();
-
     }
     
     public int stoerrelse() {
@@ -101,13 +103,5 @@ public class Lenkeliste<E> implements Liste<E>{
         return skriver_ut;
     }
 
-    public static void main(String[] args) {
-        Lenkeliste<Integer> liste = new Lenkeliste<>();
-        for (int i = 0; i < 10; i++) {
-                liste.leggTil(i); 
-            }   
-        for (Integer integer : liste) {
-            System.out.println(integer);
-        }   
-    }
+
 }

@@ -24,6 +24,7 @@ class IndeksertListe <E> extends Lenkeliste<E> {
         }
         stoerrelse++;
     }
+    
     public void sett(int pos, E x) {
         if (pos < 0 || pos >= stoerrelse()) {
             throw new UgyldigListeindeks(pos);
@@ -75,4 +76,16 @@ class IndeksertListe <E> extends Lenkeliste<E> {
         stoerrelse--;
         return ny_node_4.info;
         }       
+
+        public static void main(String[] args) {
+        IndeksertListe<Integer> liste = new IndeksertListe<Integer>();
+        for (int i = 0; i < 10; i++) {
+            liste.leggTil(i);
+        }
+
+        for (Integer integer : liste) {
+            System.out.println(integer);
+        }
+
+        }
     }

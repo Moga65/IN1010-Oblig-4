@@ -45,4 +45,5 @@ public class Lege implements Comparable<Lege> {
         utskrevneResepter.leggTil(ny_Blaaresepter);
         return ny_Blaaresepter;
     }
+
 }

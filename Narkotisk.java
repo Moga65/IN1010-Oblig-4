@@ -9,7 +9,7 @@ public class Narkotisk extends Legemiddel{
     }
     @Override
     public String toString() {
-        return super.toString() + " styrke: " + styrke;
+        return super.toString() + " styrke: " + styrke + ", Type: Narkotisk";
     }
 
 
