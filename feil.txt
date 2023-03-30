@@ -1,0 +1,3 @@
+Iterator var feil.
+Unødvendige abstrakter på forskjellige steder i programmet.
+Legesystemet var ikke skrevet en gang.
