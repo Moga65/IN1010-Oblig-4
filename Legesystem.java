@@ -161,6 +161,7 @@ public class Legesystem {
                 E1();
             break;
             case 2:
+                E2();
                 break;
             case 3:
                 break;
@@ -245,13 +246,143 @@ public class Legesystem {
                 E_kill();
                 break;
             case 3:
-            
+                leggTilLegemiddel();
+                break;
+            case 4:
+                leggTilLege();
+                break;
+            case 5:
+                leggTilPasient();
+                break;
+            case 6:
+                leggTilResept();
+                break;
             default:
                 System.out.println("Ugyldig valg, prøv igjen.");
         }
 
     }
+    public void leggTilLegemiddel() {
+        System.out.println("1. Tilbake til hovedmeny");
+        System.out.println("Velg legemiddeltype");
+        System.out.println("2. Vanlig");
+        System.out.println("3. Narkotisk");
+        System.out.println("4. Vanedannende");
 
+        Scanner input = new Scanner(System.in);
+        int svar = input.nextInt();
+        input.nextLine();
+        switch (svar){
+            case 1:
+                E0();
+                break;
+            case 2:
+                Scanner input2 = new Scanner(System.in);
+                System.out.println("Navn: ");
+                String navn = input2.nextLine();
+                System.out.println("Pris: ");
+                int pris = input2.nextInt();
+                System.out.println("Virkestoff: ");
+                double virkestoff = input2.nextDouble();
+                Vanlig vanlig = new Vanlig(navn, pris, virkestoff);
+                legemidler.leggTil(vanlig);
+                break;
+            case 3:     
+                Scanner input3 = new Scanner(System.in);
+                System.out.println("Navn: ");
+                String navn2 = input3.nextLine();
+                System.out.println("Pris: ");
+                int pris2 = input3.nextInt();
+                System.out.println("Virkestoff: ");
+                double virkestoff2 = input3.nextDouble();
+                System.out.println("Styrke: ");
+                int styrke = input3.nextInt();
+                Narkotisk narkotisk = new Narkotisk(navn2, pris2, virkestoff2, styrke);
+                legemidler.leggTil(narkotisk);
+                break;
+            
+            case 4:
+                Scanner input4 = new Scanner(System.in);
+                System.out.println("Navn: ");
+                String navn3 = input4.nextLine();
+                System.out.println("Pris: ");
+                int pris3 = input4.nextInt();
+                System.out.println("Virkestoff: ");
+                double virkestoff3 = input4.nextDouble();
+                System.out.println("Styrke: ");
+                int styrke2 = input4.nextInt();
+                Vanedannende vanedannende = new Vanedannende(navn3, pris3, virkestoff3, styrke2);
+                legemidler.leggTil(vanedannende);
+                break;
+            default:
+                System.out.println("Ugyldig valg, prøv igjen.");
+        }
+    }
+
+    public void leggTilLege() {   
+        System.out.println("1. Tilbake til hovedmeny");
+        System.out.println("Velg legetype");
+        System.out.println("2. Lege");
+        System.out.println("3. Spesialist");
+
+        Scanner input = new Scanner(System.in);
+        int svar = input.nextInt();
+        input.nextLine();
+        switch (svar) {
+            case 1:
+            E0();
+            break;
+        case 2:
+            Scanner input2 = new Scanner(System.in);
+            System.out.println("Navn: ");
+            String navn = input2.nextLine();
+            Lege lege = new Lege(navn);
+            leger.leggTil(lege);
+            break;
+        case 3:
+            Scanner input3 = new Scanner(System.in);
+            System.out.println("Navn: ");
+            String navn2 = input3.nextLine();
+            System.out.println("KontrollID: ");
+            String kontrollID = input3.nextLine();
+            Spesialist spesialist = new Spesialist(navn2, kontrollID);
+            leger.leggTil(spesialist);
+            break;
+            default:
+            System.out.println("Ugyldig valg, prøv igjen.");
+        }
+
+    }
+    public void leggTilPasient() {
+        System.out.println("1. Tilbake til hovedmeny");
+        System.out.println("2. Legg til pasient");
+
+        Scanner input = new Scanner(System.in);
+        int svar = input.nextInt();
+        input.nextLine();
+        switch (svar) {
+            case 1:
+            E0();
+                break;
+            case 2:
+                Scanner input2 = new Scanner(System.in);
+                System.out.println("Navn: ");
+                String navn = input2.nextLine();
+                System.out.println("Fødselsnummer: ");
+                String fødselsnummer = input2.nextLine();
+                Pasient pasient = new Pasient(navn, fødselsnummer);
+                pasienter.leggTil(pasient);
+                break;     
+            default:
+                System.out.println("Ugyldig valg, prøv igjen.");
+        }
+    }
+    public void leggTilResept() {
+        
+        
+    }
+
+    
     public void E3() {
         
     }
