@@ -1,0 +1,15 @@
+Pasient: Jens Hans Olsen, ID: 0, Fødselsnummer: 11111143521
+Pasient: Petrolina Swiq, ID: 1, Fødselsnummer: 24120099343
+Pasient: Sven Svendsen, ID: 2, Fødselsnummer: 10111224244
+Pasient: Juni Olsen, ID: 3, Fødselsnummer: 21049563451
+Dr. Cox
+Dr. Hillestad Lovold. Kontrollkode: 98765
+Dr. House. Kontrollkode: 12345
+Dr. Wilson
+Navn: Predizol Pris: 450 Virkestoff: 75.0 styrke: 8, Type: Narkotisk
+Navn: Paralgin Forte Pris: 65 Virkestoff: 400.0 Styrke: 5, Type: Vanedannende
+Navn: Placebo Pianissimo Pris: 10 Virkestoff: 0.0 Type: Vanlig
+Navn: Ibux Pris: 240 Virkestoff: 200.0 Type: Vanlig
+Legemiddel: Paralgin Forte Lege: Dr. Cox Pasient: Pasient: Sven Svendsen, ID: 2, Fødselsnummer: 10111224244 Reit: 7
+Legemiddel: Placebo Pianissimo Lege: Dr. House Pasient: Pasient: Petrolina Swiq, ID: 1, Fødselsnummer: 24120099343 Reit: 3
+Legemiddel: Ibux Lege: Dr. Hillestad Lovold Pasient: Pasient: Juni Olsen, ID: 3, Fødselsnummer: 21049563451 Reit: 25

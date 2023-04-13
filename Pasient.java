@@ -3,12 +3,13 @@ public class Pasient {
     private String foedselsnummer;
     private String navn;
     static  int teller = 0;
-    private Lenkeliste<Resept> resepter;
+    public IndeksertListe<Resept> resepter;
 
     public Pasient(String navn, String foedselsnummer){
         this.navn = navn;
         this.foedselsnummer = foedselsnummer;
         this.id = teller++;
+        resepter = new IndeksertListe<Resept>();
     }
     //Skriver hjelpemetoder 
     public String hentFoedselsnummer(){

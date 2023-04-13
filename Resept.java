@@ -21,7 +21,7 @@ public abstract class Resept {
         return pasient;
     }
 
-    public Object hentLegemiddel(){
+    public Legemiddel hentLegemiddel(){
         return legemiddel;
     }
 
@@ -42,10 +42,11 @@ public abstract class Resept {
             return false;
         }
         else{
-            this.reit = reit--;
+            reit--;
             return true;
         }
     }
+
     public String toString() {
         return "Legemiddel: " + legemiddel.navn + " Lege: " + utskrivLege.Navn + " Pasient: " + pasient + " Reit: " + reit;
     }
