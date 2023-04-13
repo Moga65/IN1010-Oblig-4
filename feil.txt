@@ -2,3 +2,33 @@ Iterator var feil.
 Unødvendige abstrakter på forskjellige steder i programmet.
 Legesystemet var ikke skrevet en gang.
 hasnext er søppel ikke skrevet riktig engang
+
+  /*                if (linje.startsWith("#") || linje.trim().isEmpty()) {
+                    continue;
+                }
+
+                String[] verdier = linje.split(",");
+                
+
+                if (linje.contains("Pasienter")) {
+                    String navn = verdier[0].trim();
+                    String fnr = verdier[1].trim();
+                  
+                } else if (linje.contains("Legemidler")) {
+                    String navn = verdier[0].trim();
+                    String type = verdier[1].trim();
+                    double pris = Double.parseDouble(verdier[2].trim());
+                    double virkestoff = Double.parseDouble(verdier[3].trim());
+                } 
+
+                else if (linje.contains("Leger")) {
+                    String navn = verdier[0].trim();
+                    int kontrollid = Integer.parseInt(verdier[1].trim());
+                }
+
+                else if (linje.contains("Resepter")) {
+                    int legemiddelNummer = Integer.parseInt(verdier[0].trim());
+                    String legeNavn = verdier[1].trim();
+                    int pasientID = Integer.parseInt(verdier[2].trim());
+                    String type = verdier[3].trim();
+                } */
